@@ -13,6 +13,7 @@ public class RecipeController {
     public RecipeController(RecipeService recipeService){
         this.recipeService = recipeService;
     }
+
     @SuppressWarnings("removal")
     @RequestMapping("/recipe/show/{id}")
     public String findById(@PathVariable String id, Model model){

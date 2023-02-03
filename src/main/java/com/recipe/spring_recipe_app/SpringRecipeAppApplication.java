@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @EntityScan("com.recipe.domain")
 @EnableJpaRepositories(basePackages = "com.recipe.repositories")
-@ComponentScan(basePackages ={"com.recipe.bootstrap","com.recipe.services","com.recipe.controllers"})
+@ComponentScan(basePackages ={"com.recipe.bootstrap","com.recipe.services","com.recipe.controllers","com.recipe.converters"})
 public class SpringRecipeAppApplication {
 
     public static void main(String[] args) {
