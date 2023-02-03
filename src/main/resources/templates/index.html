@@ -19,6 +19,8 @@
 
 </head>
 <body>
+<!--/*@thymesVar id="recipes" type="java.util.List"*/-->
+<!--/*@thymesVar id="recipe" type="com.recipe.domain.Recipe"*/-->
 <div class="container-fluid" style="margin-top: 20px">
     <div class="row>">
         <div class="col-md-6 col-md-offset-3">
@@ -34,12 +36,16 @@
                                 <th>ID</th>
                                 <th>Description</th>
                                 <th>View</th>
+                                <th>Update</th>
+                                <th>Delete</th>
                             </tr>
                             </thead>
                             <tr th:each="recipe: ${recipes}">
                                 <td th:text="${recipe.id}">123</td>
                                 <td th:text="${recipe.description}">Tasty</td>
-                                <td><a href="#" th:href="@{'recipe/show/' + ${recipe.id}}">View</a> </td>
+                                <td><a href="#" th:href="@{'/recipe/' + ${recipe.id}+'/show'}">View</a></td>
+                                <td><a href="#" th:href="@{'/recipe/' + ${recipe.id} + '/update'}">Update</a></td>
+                                <td><a href="#" th:href="@{'/recipe/' + ${recipe.id} + '/delete'}">Delete</a></td>
                             </tr>
                         </table>
                     </div>
